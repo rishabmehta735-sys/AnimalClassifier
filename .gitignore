@@ -3,4 +3,5 @@ c_d_h.py
 __pycache__
 /dataset
 /rawData
-best_model.keras
+.venv
+*.pyc

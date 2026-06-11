@@ -17,7 +17,7 @@ model = models.Sequential([
 
     layers.Flatten(),
     layers.Dense(256, activation='relu'),
-    # Dropout means drop half od the total neurons in the last layer 
+    # Dropout means drop 45% of the total neurons in the last layer 
     # so that each neuron becomes independent and strong and it prevents overfitting
     layers.Dropout(0.45),
     layers.Dense(3, activation='softmax')  # 3 = cat, dog, horse

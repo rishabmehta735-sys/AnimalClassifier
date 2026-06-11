@@ -1,11 +1,12 @@
 # here we are training the model using training dataset and validing it with the validation dataset
-from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint  # type: ignore
 from model import model
 from getDataset import getDatasets
 
-# Here ealry stopping means if model keeps perfroming bad (validation loss keeps increasing ) then after
+# Here early stopping means if model keeps performing bad (validation loss keeps increasing ) then after
 #  5 epochs which is patience it will stop and it will restore the best weights
 # Simply because if val_loss is increasing it means model is memorizing overfitting
+
 callbacks = [
     EarlyStopping(patience=5, restore_best_weights=True),
     ModelCheckpoint('model/best_model.keras', save_best_only=True)

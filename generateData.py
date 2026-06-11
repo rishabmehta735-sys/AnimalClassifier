@@ -1,6 +1,6 @@
 # Here in this file we are generating thousands 
 # of images of cat,dog and horse
-from icrawler.builtin import BingImageCrawler,BaiduImageCrawler
+from icrawler.builtin import BingImageCrawler,BaiduImageCrawler # type: ignore
 import os
 import shutil
 classes = ["cat","dog","horse"]
